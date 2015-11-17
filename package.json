@@ -8,5 +8,9 @@
   },
   "author": "",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "tsify": "^0.12.2",
+    "watchify": "^3.6.1"
+  }
 }
