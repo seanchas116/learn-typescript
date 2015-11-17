@@ -9,5 +9,6 @@
     "filesGlob": [
         "**/*.ts",
         "!node_modules/**"
-    ]
+    ],
+    "compileOnSave": false
 }
