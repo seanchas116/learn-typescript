@@ -1,3 +1,5 @@
+import Person = require("./Person");
+import actions = require("./actions");
 
 const messageArea = document.getElementById("message");
 const greetButton = document.getElementById("greet");
@@ -7,8 +9,10 @@ function setMessage(message: string) {
   messageArea.innerHTML = message;
 }
 
+const person = {firstName: "Foo", lastName: "Bar"};
+
 greetButton.addEventListener("click", () => {
-  setMessage("Hello!");
+  setMessage(actions.greet(person));
 });
 askBirthdayButton.addEventListener("click", () => {
   setMessage(new Date().toString());
