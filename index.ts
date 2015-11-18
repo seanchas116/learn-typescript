@@ -1,3 +1,4 @@
+import _ = require("lodash");
 import Shape = require("./Shape");
 import Rectangle = require("./Rectangle");
 import Circle = require("./Circle");
@@ -24,7 +25,12 @@ const rect = {
   }
 };
 */
+
+function randomColor() {
+  return "#" + _.sample("0123456789ABCDEF".split(""), 6).join("");
+}
+
 const rect = new Rectangle(100, 100, 200, 300);
 const circle = new Circle(300, 300, 50);
-fillShape("#ffa", rect);
-fillShape("#abc", circle);
+fillShape(randomColor(), rect);
+fillShape(randomColor(), circle);
