@@ -1,5 +1,6 @@
 import Shape = require("./Shape");
 import Rectangle = require("./Rectangle");
+import Circle = require("./Circle");
 
 const canvas = document.createElement("canvas");
 canvas.width = 800;
@@ -8,8 +9,9 @@ document.body.appendChild(canvas);
 
 const ctx = canvas.getContext("2d");
 
-function fillShape(shape: Shape) {
-  ctx.fillStyle = "#abc";
+function fillShape(color: string, shape: Shape) {
+  ctx.beginPath();
+  ctx.fillStyle = color;
   shape.draw(ctx);
   ctx.fill();
 }
@@ -23,4 +25,6 @@ const rect = {
 };
 */
 const rect = new Rectangle(100, 100, 200, 300);
-fillShape(rect);
+const circle = new Circle(300, 300, 50);
+fillShape("#ffa", rect);
+fillShape("#abc", circle);
