@@ -1,19 +1,9 @@
-import Person = require("./Person");
-import actions = require("./actions");
+const canvas = document.createElement("canvas");
+canvas.width = 800;
+canvas.height = 600;
+document.body.appendChild(canvas);
 
-const messageArea = document.getElementById("message");
-const greetButton = document.getElementById("greet");
-const askBirthdayButton = document.getElementById("askBirthday");
-
-function setMessage(message: string) {
-  messageArea.innerHTML = message;
-}
-
-const person = {firstName: "Foo", lastName: "Bar"};
-
-greetButton.addEventListener("click", () => {
-  setMessage(actions.greet(person));
-});
-askBirthdayButton.addEventListener("click", () => {
-  setMessage(new Date().toString());
-});
+const ctx = canvas.getContext("2d");
+ctx.fillStyle = "#abc";
+ctx.rect(100, 100, 200, 200);
+ctx.fill();
