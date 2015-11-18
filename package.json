@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "watchify index.ts -p tsify -o bundle.js",
+    "tsc": "tsc -w",
+    "watchify": "watchify src/index.js -o bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "tsify": "^0.12.2",
+    "typescript": "^1.6.2",
     "watchify": "^3.6.1"
   },
   "dependencies": {
