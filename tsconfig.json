@@ -10,5 +10,13 @@
         "**/*.ts",
         "!node_modules/**"
     ],
+    "files": [
+        "./typings/lodash/lodash.d.ts",
+        "./typings/tsd.d.ts",
+        "./Circle.ts",
+        "./index.ts",
+        "./Rectangle.ts",
+        "./Shape.ts"
+    ],
     "compileOnSave": false
 }
