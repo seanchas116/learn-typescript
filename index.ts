@@ -1,4 +1,5 @@
 import Shape = require("./Shape");
+import Rectangle = require("./Rectangle");
 
 const canvas = document.createElement("canvas");
 canvas.width = 800;
@@ -13,11 +14,13 @@ function fillShape(shape: Shape) {
   ctx.fill();
 }
 
+/*
 const rect = {
   x: 100, y: 200, w: 100, h: 100,
   draw(ctx: CanvasRenderingContext2D) {
     ctx.rect(this.x, this.y, this.w, this.h);
   }
 };
-
+*/
+const rect = new Rectangle(100, 100, 200, 300);
 fillShape(rect);
