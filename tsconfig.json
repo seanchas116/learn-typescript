@@ -11,11 +11,15 @@
         "!node_modules/**"
     ],
     "files": [
-        "./typings/tsd.d.ts",
-        "./src/Circle.ts",
-        "./src/index.ts",
-        "./src/Rectangle.ts",
-        "./src/Shape.ts"
+        "src/Circle.ts",
+        "src/index.ts",
+        "src/Rectangle.ts",
+        "src/Shape.ts",
+        "typings/lodash/lodash.d.ts",
+        "typings/tsd.d.ts"
     ],
-    "compileOnSave": false
+    "compileOnSave": false,
+    "atom": {
+        "rewriteTsconfig": true
+    }
 }
