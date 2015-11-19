@@ -8,7 +8,7 @@ interface LodashStatic {
 }
 */
 
-import Shape = require("./Shape");
+import Path = require("./Path");
 import Rectangle = require("./Rectangle");
 import Circle = require("./Circle");
 import _ = require("lodash");
@@ -20,10 +20,10 @@ document.body.appendChild(canvas);
 
 const ctx = canvas.getContext("2d");
 
-function fillShape(color: string, shape: Shape) {
+function fillPath(color: string, path: Path) {
   ctx.beginPath();
   ctx.fillStyle = color;
-  shape.draw(ctx);
+  path.draw(ctx);
   ctx.fill();
 }
 
@@ -40,16 +40,16 @@ function randomColor() {
   return "#" + _.sample("0123456789ABCDEF".split(""), 6).join("");
 }
 
-const circles = _.times(100, () => new Circle(Math.random() * 800, Math.random() * 600, 10));
+const circles  = _.times(100, () => new Circle(Math.random() * 800, Math.random() * 600, 10));
 const rects = _.times(100, () => new Rectangle(Math.random() * 800, Math.random() * 600, 10, 10));
 
 //const rect = new Rectangle(100, 100, 200, 300);
 //const circle = new Circle(300, 300, 50);
-//fillShape(randomColor(), rect);
-//fillShape(randomColor(), circle);
+//fillPath(randomColor(), rect);
+//fillPath(randomColor(), circle);
 for (const circle of circles) {
-  fillShape(randomColor(), circle);
+  fillPath(randomColor(), circle);
 }
 for (const rect of rects) {
-  fillShape(randomColor(), rect);
+  fillPath(randomColor(), rect);
 }
