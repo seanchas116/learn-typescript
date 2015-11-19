@@ -17,6 +17,7 @@
         "src/Rectangle.ts",
         "src/Shape.ts",
         "typings/lodash/lodash.d.ts",
+        "typings/node/node.d.ts",
         "typings/tsd.d.ts"
     ],
     "compileOnSave": false,
