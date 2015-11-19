@@ -1,4 +1,9 @@
-import _ = require("lodash");
+const _: LodashStatic = require("lodash");
+
+interface LodashStatic {
+  sample<T>(array: T[], count: number): T[];
+}
+
 import Shape = require("./Shape");
 import Rectangle = require("./Rectangle");
 import Circle = require("./Circle");
