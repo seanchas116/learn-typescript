@@ -16,6 +16,8 @@
         "src/index.ts",
         "src/Path.ts",
         "src/Rectangle.ts",
+        "src/Scene.ts",
+        "src/Shape.ts",
         "typings/lodash/lodash.d.ts",
         "typings/node/node.d.ts",
         "typings/tsd.d.ts"

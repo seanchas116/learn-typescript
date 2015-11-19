@@ -11,6 +11,7 @@ interface LodashStatic {
 import Path = require("./Path");
 import Rectangle = require("./Rectangle");
 import Circle = require("./Circle");
+import Scene = require("./Scene");
 import _ = require("lodash");
 
 const canvas = document.createElement("canvas");
@@ -40,16 +41,27 @@ function randomColor() {
   return "#" + _.sample("0123456789ABCDEF".split(""), 6).join("");
 }
 
-const circles  = _.times(100, () => new Circle(Math.random() * 800, Math.random() * 600, 10));
-const rects = _.times(100, () => new Rectangle(Math.random() * 800, Math.random() * 600, 10, 10));
+const circles  = _.times(100, () => ({
+  fill: randomColor(),
+  path: new Circle(Math.random() * 800, Math.random() * 600, 10)
+}));
+const rects = _.times(100, () => ({
+  fill: randomColor(),
+  path: new Rectangle(Math.random() * 800, Math.random() * 600, 10, 10)
+}));
 
 //const rect = new Rectangle(100, 100, 200, 300);
 //const circle = new Circle(300, 300, 50);
 //fillPath(randomColor(), rect);
 //fillPath(randomColor(), circle);
-for (const circle of circles) {
-  fillPath(randomColor(), circle);
-}
-for (const rect of rects) {
-  fillPath(randomColor(), rect);
-}
+// for (const circle of circles) {
+//   fillPath(randomColor(), circle);
+// }
+// for (const rect of rects) {
+//   fillPath(randomColor(), rect);
+// }
+
+const scene = new Scene();
+scene.add(circles);
+scene.add(rects);
+scene.draw(ctx);
