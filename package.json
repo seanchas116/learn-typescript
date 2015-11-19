@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc -w",
-    "watchify": "watchify src/index.js -o bundle.js",
+    "watchify": "watchify -d src/index.js -o bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
