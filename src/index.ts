@@ -1,5 +1,7 @@
 const _: LodashStatic = require("lodash");
 
+declare function require(module: string): any;
+
 interface LodashStatic {
   sample<T>(array: T[], count: number): T[];
 }
